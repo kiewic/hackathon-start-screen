@@ -80,7 +80,7 @@
             <h3>Publish a report to the PBI Service</h3>
             <p>5 minute view</p>
         </div>
-        <div data-link="Power BI Desktop July 2019 Feature Summary">
+        <div data-link="https://www.youtube.com/watch?v=l7OMRUF9UYg">
             <img alt="video screenshot" src="video4.png">
             <h3>Useful video for first time user 2</h3>
             <p>6 minute view</p>
@@ -92,10 +92,18 @@
         </div>
     </div>
     <script>
-        console.log(document.querySelectorAll(".flexContainer > div"));
-        document.querySelectorAll(".flexContainer > div").forEach(x => {
-            let url = x.getAttribute('data-link');
-            x.addEventListener('click', () => window.open(url, '_blank'));
+        let contentLinks = document.querySelectorAll(".flexContainer > div");
+        Array.from(contentLinks).forEach(contentLink => {
+            let uri = contentLink.getAttribute('data-link');
+            contentLink.addEventListener("click", async (x) => {
+                if (typeof CefSharp !== 'undefined') {
+                    await CefSharp.BindObjectAsync("startDialog2Host");
+                    window.startDialog2Host.onLinkClick(uri);
+                }
+                else {
+                    window.open(uri, '_blank');
+                }
+            });
         });
     </script>
 </body>
