@@ -1,6 +1,80 @@
-<h1><?php echo 'Hello World'; ?></h1>
-<img src="video1.png">
-<img src="video2.png">
-<img src="video3.png">
-<img src="video4.png">
-<img src="video5.png">
+<html>
+<head>
+    <style>
+        html,
+        body {
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            font-family: Segoe UI;
+            /* background-color: lightblue; */
+        }
+        .flexContainer {
+            display: flex;
+            flex-direction: row;
+            width: 100vh;
+        }
+        .flexContainer > div {
+            flex-basis: 0;
+            flex-grow: 1;
+            background-color: whitesmoke;
+            padding: 5px;
+            margin: 5px;
+
+            border: 1px solid #F3F2F1;
+            box-sizing: border-box;
+            box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.11), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);
+            border-radius: 2px;
+        }
+        .flexContainer h3 {
+            font-family: Segoe UI;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            color: #252423;
+            margin: 5px 0px 5px 0px;
+            padding: 0px;
+        }
+        .flexContainer p {
+            font-family: Segoe UI;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            margin: 0px;
+            padding: 0px 0px 0px 20px;
+            background: no-repeat left center url('clock.svg');
+        }
+    </style>
+</head>
+<body>
+    <div class="flexContainer">
+        <div>
+            <img src="video1.png">
+            <h3>Explore Power BI Desktop with Customer profitability sample</h3>
+            <p></p>
+        </div>
+        <div>
+            <img src="video2.png">
+            <h3>How to use filter </h3>
+            <p>2 minute view</p>
+        </div>
+        <div>
+            <img src="video3.png">
+            <h3>Publish report to Service</h3>
+            <p>5 minute view</p>
+        </div>
+        <div>
+            <img src="video4.png">
+            <h3>Useful video for first time user 2</h3>
+            <p>6 minute view</p>
+        </div>
+        <div>
+            <img src="video5.png">
+            <h3>Useful video for first time user 3</h3>
+            <p>2 minute view</p>
+        </div>
+    </div>
+</body>
+</html>
