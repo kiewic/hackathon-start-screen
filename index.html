@@ -133,7 +133,7 @@
             ),
         );
 
-        $items = $_POST["advanced"] ? $advanced : $beginner;
+        $items = $_GET["advanced"] ? $advanced : $beginner;
         foreach ($items as $item) {
             print "<div data-link=\"$item[link]\">";
             print "<img alt=\"video screenshot\" src=\"$item[src]\">";
