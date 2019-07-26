@@ -136,7 +136,7 @@
         $items = $_GET["advanced"] ? $advanced : $beginner;
         foreach ($items as $item) {
             print "<div data-link=\"$item[link]\">";
-            print "<img alt=\"video screenshot\" src=\"links\$item[src]\">";
+            print "<img alt=\"video screenshot\" src=\"links\"" . $item['src'] . "}\">";
             print "<h3>$item[title]</h3>";
             if ($item[time]) {
                 print "<p>$item[time]</p>";
